@@ -62,7 +62,19 @@ This keeps rebuilding `dist/` when files change.
 2. Enable **Developer mode** (top-right)
 3. Click **Load unpacked**
 4. Select this project's `dist/` folder
-5. Open [https://www.overleaf.com](https://www.overleaf.com)
+5. Open [https://www.overleaf.com](https://www.overleaf.com) and create a project
+6. Navigate to the `.tex` file page to see the word counter
+
+## Load local add-on in Firefox
+
+1. Open about:debugging
+2. Click This Firefox in the sidebar
+3. Click Load Temporary Add-on…
+4. Select the project's manifest.json file inside the source or build directory
+5. Open [https://www.overleaf.com](https://www.overleaf.com) and create a project
+6. Navigate to the `.tex` file page to see the word counter
+
+Note: Firefox temporary add-ons will disappear when Firefox is restarted. Reload the add-on if needed.
 
 ## Files
 

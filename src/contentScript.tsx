@@ -43,25 +43,6 @@ function scheduleIdle(work: () => void): void {
   window.setTimeout(work, 0);
 }
 
-
-// function scheduleIdle(work: () => void): void {
-//   const idle = (
-//     window as Window & {
-//       requestIdleCallback?: (
-//         cb: () => void,
-//         options?: { timeout: number },
-//       ) => number;
-//     }
-//   ).requestIdleCallback;
-
-//   if (idle) {
-//     idle(work, { timeout: 700 });
-//     return;
-//   }
-
-//   window.setTimeout(work, 0);
-// }
-
 function mountRoot(): ReturnType<typeof createRoot> {
   let rootEl = document.getElementById(ROOT_ID);
   if (!rootEl) {
