@@ -81,8 +81,6 @@ class OverleafWordCountApp {
 
   private currentResult: WordCountBreakdown = {
     bodyWords: 0,
-    rawWords: 0,
-    removedWords: 0,
     plainText: "",
   };
 
@@ -132,8 +130,6 @@ class OverleafWordCountApp {
     this.reactRoot.render(
       <FloatingPanel
         bodyWords={this.currentResult.bodyWords}
-        rawWords={this.currentResult.rawWords}
-        removedWords={this.currentResult.removedWords}
         hasContent={hasContent}
       />,
     );

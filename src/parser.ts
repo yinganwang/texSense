@@ -1,7 +1,5 @@
 export interface WordCountBreakdown {
   bodyWords: number;
-  rawWords: number;
-  removedWords: number;
   plainText: string;
 }
 
@@ -9,6 +7,11 @@ const COMMANDS_WITH_ARG = [
   "title",
   "author",
   "date",
+  "url",
+  "label",
+  "bibliography",
+  "footnote",
+  "footnotetext",
   "section",
   "subsection",
   "subsubsection",
@@ -153,7 +156,8 @@ function stripCommandsWithArgument(source: string, commandNames: string[]): stri
 }
 
 function stripLatexCommands(text: string): string {
-  let output = text.replace(COMMAND_WITH_OPTIONAL_ARG, " ");
+  let output = text.replace(/\\(?:begin|end)\{[^}]*\}/g, " ");
+  output = output.replace(COMMAND_WITH_OPTIONAL_ARG, " ");
   output = output.replace(/\\./g, " ");
   return output;
 }
@@ -168,8 +172,6 @@ function normalizeText(text: string): string {
 export function countBodyWords(source: string): WordCountBreakdown {
   const noComments = stripComments(source);
   const bodySlice = sliceDocumentBody(noComments);
-
-  const rawWords = countWords(bodySlice);
 
   let cleaned = bodySlice;
   cleaned = stripCommandsWithArgument(cleaned, COMMANDS_WITH_ARG);
@@ -190,8 +192,6 @@ export function countBodyWords(source: string): WordCountBreakdown {
 
   return {
     bodyWords,
-    rawWords,
-    removedWords: Math.max(0, rawWords - bodyWords),
-    plainText: cleaned
+    plainText: cleaned,
   };
 }
