@@ -9,6 +9,7 @@ const BRIDGE_SOURCE = "__OLWC_BRIDGE__";
 const BRIDGE_EVENT_TYPE = "OVERLEAF_TEXT";
 const DEBOUNCE_MS = 400;
 
+declare const chrome: any;
 interface BridgeEventPayload {
   type?: string;
   source?: string;
@@ -24,17 +25,18 @@ function debounce(fn: () => void, wait: number): () => void {
 }
 
 function scheduleIdle(work: () => void): void {
-  const idle = (
-    window as Window & {
-      requestIdleCallback?: (
-        cb: () => void,
-        options?: { timeout: number },
-      ) => number;
-    }
-  ).requestIdleCallback;
+  const win = window as Window & {
+    requestIdleCallback?: (
+      cb: (deadline: {
+        didTimeout: boolean;
+        timeRemaining: () => number;
+      }) => void,
+      options?: { timeout: number },
+    ) => number;
+  };
 
-  if (idle) {
-    idle(work, { timeout: 700 });
+  if (typeof win.requestIdleCallback === "function") {
+    win.requestIdleCallback(() => work(), { timeout: 700 });
     return;
   }
 
