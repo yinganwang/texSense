@@ -2,6 +2,45 @@
 
 A Manifest v3 extension that adds a floating real-time body word-count panel on `overleaf.com`.
 
+## Word Count Rules
+
+The parser counts body words from LaTeX source and excludes non-body content.
+
+Exclusions:
+
+- Comments (`% ...`)
+- Everything outside `\begin{document}...\end{document}` (when present)
+- Commands with arguments:
+  - `\title{...}`
+  - `\author{...}`
+  - `\date{...}`
+  - `\url{...}`
+  - `\label{...}`
+  - `\bibliography{...}`
+  - `\footnote{...}`
+  - `\footnotetext{...}`
+  - `\section{...}`
+  - `\subsection{...}`
+  - `\subsubsection{...}`
+  - `\caption{...}`
+- Single commands:
+  - `\maketitle`
+  - `\tableofcontents`
+- Full environments:
+  - `figure`, `figure*`
+  - `table`, `table*`
+  - `bibliography`, `thebibliography`
+  - `equation`, `equation*`
+  - `align`, `align*`
+  - `math`, `displaymath`
+- Math blocks:
+  - `$$...$$`
+  - `\[...\]`
+  - `\(...\)`
+  - inline `$...$`
+- All `\begin{...}` / `\end{...}` tags themselves
+- Remaining LaTeX commands and escaped control sequences
+
 ## Setup
 
 ```bash
