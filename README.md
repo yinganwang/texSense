@@ -5,9 +5,8 @@ A Manifest v3 extension that adds a floating real-time body word-count panel on 
 Try it on [Chrome](https://chromewebstore.google.com/detail/texsense-real-time-overle/npggjbabdlnmiamalfkbpdjpgbdlhfkj) or [Firefox](https://addons.mozilla.org/en-US/firefox/addon/texsense/) now!
 
 
-![Floating Word Counter](assets/2.png)
+![Floating Word Counter](assets/demo.gif)
 
-![Real-time Word Count Panel](assets/1.jpg)
 
 ## Word Count Rules
 
@@ -48,7 +47,7 @@ Exclusions:
 - All `\begin{...}` / `\end{...}` tags themselves
 - Remaining LaTeX commands and escaped control sequences
 
-## Setup
+## Local setup
 
 ```bash
 npm install
