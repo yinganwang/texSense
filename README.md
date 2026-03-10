@@ -1,6 +1,6 @@
-# TexSense: A Browser Extension for Counting Words on Overleaf in Real Time
+# TexSense: Real-time word count for Overleaf
 
-A Manifest v3 extension that adds a floating real-time body word-count panel on `overleaf.com`.
+TexSense is a browser extension that counts words in LaTeX as you type.
 
 No more recompiling or downloads. With TexSense, you can see your word count in real time. 
 
