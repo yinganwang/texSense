@@ -2,7 +2,9 @@
 
 A Manifest v3 extension that adds a floating real-time body word-count panel on `overleaf.com`.
 
-Try it on [Chrome](https://chromewebstore.google.com/detail/texsense-real-time-overle/npggjbabdlnmiamalfkbpdjpgbdlhfkj) or [Firefox](https://addons.mozilla.org/en-US/firefox/addon/texsense/) now!
+No more recompiling or downloads. With TexSense, you can see your word count in real time. 
+
+### Try it on [Chrome](https://chromewebstore.google.com/detail/texsense-real-time-overle/npggjbabdlnmiamalfkbpdjpgbdlhfkj) or [Firefox](https://addons.mozilla.org/en-US/firefox/addon/texsense/) now!
 
 
 ![Floating Word Counter](assets/2.png)
