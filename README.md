@@ -2,7 +2,9 @@
 
 TexSense is a browser extension that counts words in LaTeX as you type.
 
-No more recompiling or downloads. With TexSense, you can see your word count in real time. 
+No more recompiling or downloads. See your writing progress in real time. 
+
+⭐ If TexSense helps with your writing, consider starring the repo!
 
 ### Try it on [Chrome](https://chromewebstore.google.com/detail/texsense-real-time-overle/npggjbabdlnmiamalfkbpdjpgbdlhfkj) or [Firefox](https://addons.mozilla.org/en-US/firefox/addon/texsense/) now!
 
