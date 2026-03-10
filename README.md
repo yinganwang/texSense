@@ -1,6 +1,13 @@
-# Overleaf Latex Word Count (Chrome Extension)
+# TexSense: A Browser Extension for Counting Words on Overleaf in Real Time
 
 A Manifest v3 extension that adds a floating real-time body word-count panel on `overleaf.com`.
+
+Try it on [Chrome](https://chromewebstore.google.com/detail/texsense-real-time-overle/npggjbabdlnmiamalfkbpdjpgbdlhfkj) or [Firefox](https://addons.mozilla.org/en-US/firefox/addon/texsense/) now!
+
+
+![Floating Word Counter](assets/2.png)
+
+![Real-time Word Count Panel](assets/1.jpg)
 
 ## Word Count Rules
 
